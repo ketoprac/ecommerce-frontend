@@ -34,17 +34,17 @@ const HomePage = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  // const res = await fetch(`http://localhost:3000/api/products`); for local
-  const res = await fetch(`https://sayur-app.vercel.app/api/products`,
-  {
-    method: "GET",
-    headers: {
-      // update with your user-agent
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36", 
-      Accept: "application/json; charset=UTF-8",
-    },
-  });
+  // const res = await fetch(`http://localhost:3000/api/products`);
+  const res = await fetch("https:/sayur-app.vercel.app/api/products")
+  // {
+  //   method: "GET",
+  //   headers: {
+  //     // update with your user-agent
+  //     "User-Agent":
+  //       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36", 
+  //     Accept: "application/json; charset=UTF-8",
+  //   },
+  // });
   const products = await res.json();
 
   return {
