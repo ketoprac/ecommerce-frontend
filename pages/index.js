@@ -34,7 +34,8 @@ const HomePage = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`http://localhost:3000/api/products`);
+  // const res = await fetch(`http://localhost:3000/api/products`); for local
+  const res = await fetch(`https://raw.githubusercontent.com/ketoprac/ecommerce-frontend/main/modules/server/data/products.json`);
   const products = await res.json();
 
   return {
