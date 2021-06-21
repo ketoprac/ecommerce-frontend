@@ -45,7 +45,7 @@ export async function getStaticPaths() {
     headers: {
       // update with your user-agent
       "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36", 
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36", 
       Accept: "application/json; charset=UTF-8",
     },
   });
@@ -57,7 +57,7 @@ export async function getStaticPaths() {
     headers: {
       // update with your user-agent
       "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36", 
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36", 
       Accept: "application/json; charset=UTF-8",
     },
   });
