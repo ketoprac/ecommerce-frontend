@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "@common/components/Layout"
-import Container from "@material-ui/core/Container"
+import Layout from "@common/components/Layout";
+import Container from "@material-ui/core/Container";
 
-import ProductDetailCard from "@mobile/components/ProductDetailCard"
+import ProductDetailCard from "@mobile/components/ProductDetailCard";
 
 const ProductDetail = ({ product }) => {
   const {
@@ -15,31 +15,33 @@ const ProductDetail = ({ product }) => {
     quantity,
     condition,
     weight,
-    promo
-  } = product
+    promo,
+  } = product;
 
   return (
-   <Layout>
-     <Container maxWidth="sm">
-      <ProductDetailCard
-        img={img}
-        title={name}
-        price={price}
-        rating={rating}
-        sold={sold}
-        description={description}
-        quantity={quantity}
-        condition={condition}
-        weight={weight}
-        promo={promo}
-      />
-     </Container>
-   </Layout>
+    <Layout>
+      <Container maxWidth="sm">
+        <ProductDetailCard
+          img={img}
+          title={name}
+          price={price}
+          rating={rating}
+          sold={sold}
+          description={description}
+          quantity={quantity}
+          condition={condition}
+          weight={weight}
+          promo={promo}
+        />
+      </Container>
+    </Layout>
   );
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://sayur-app-l7uxqio22-ketoprac.vercel.app/api/products`);
+  const res = await fetch(
+    `https://sayur-app-l7uxqio22-ketoprac.vercel.app/api/products`
+  );
   const products = await res.json();
 
   const paths = products.list.map((prod) => `/product/${prod.id}`);
@@ -48,7 +50,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`https://sayur-app-l7uxqio22-ketoprac.vercel.app/api/product/${params.id}`);
+  const res = await fetch(
+    `https://sayur-app-l7uxqio22-ketoprac.vercel.app/api/product/${params.id}`
+  );
   const product = await res.json();
 
   return {
