@@ -39,7 +39,7 @@ const ProductDetail = ({ product }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`http://localhost:3000/api/products`);
+  const res = await fetch(`https://raw.githubusercontent.com/ketoprac/ecommerce-frontend/main/modules/server/data/products.json`);
   const products = await res.json();
 
   const paths = products.list.map((prod) => `/product/${prod.id}`);
