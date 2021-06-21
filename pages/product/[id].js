@@ -39,7 +39,7 @@ const ProductDetail = ({ product }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://raw.githubusercontent.com/ketoprac/ecommerce-frontend/main/modules/server/data/products.json`);
+  const res = await fetch(`https://sayur-app.vercel.app/api/products`);
   const products = await res.json();
 
   const paths = products.list.map((prod) => `/product/${prod.id}`);
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`/api/product/${params.id}`);
+  const res = await fetch(`https://sayur-app.vercel.app/api/product/${params.id}`);
   const product = await res.json();
 
   return {

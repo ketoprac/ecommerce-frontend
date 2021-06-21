@@ -35,7 +35,7 @@ const HomePage = ({ products }) => {
 
 export async function getStaticProps() {
   // const res = await fetch(`http://localhost:3000/api/products`); for local
-  const res = await fetch(`https://raw.githubusercontent.com/ketoprac/ecommerce-frontend/main/modules/server/data/products.json`);
+  const res = await fetch(`https://sayur-app.vercel.app/api/products`);
   const products = await res.json();
 
   return {
