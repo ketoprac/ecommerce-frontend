@@ -35,7 +35,7 @@ const HomePage = ({ products }) => {
 
 export async function getStaticProps() {
   // const res = await fetch(`http://localhost:3000/api/products`); for local
-  const res = await fetch(`https://sayur-app-l7uxqio22-ketoprac.vercel.app/api/products`);
+  const res = await fetch(`https://sayur-app.vercel.app/api/products`);
   const products = await res.json();
 
   return {
