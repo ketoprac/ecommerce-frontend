@@ -35,7 +35,7 @@ const HomePage = ({ products }) => {
 
 export async function getStaticProps() {
   // const res = await fetch(`http://localhost:3000/api/products`);
-  const res = await fetch(`https:/sayur-app.heroku.app/api/products`)
+  const res = await fetch(`https:/sayur-app.herokuapp.com/api/products`)
   // {
   //   method: "GET",
   //   headers: {
